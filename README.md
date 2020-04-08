@@ -1,6 +1,6 @@
 # GenererDeplacementPDF-covid19
 
-Présentation en français et anglais / Pressentation in French and English
+Présentation en français et anglais / Presentation in French and English
 
 ## ℹ️ A propos / About
 GenererDeplacementPDF est une application web qui permet de remplir et générer une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel durant la période de confinement en France dans le contexte de la pandémie du COVID-19 (2020).
@@ -14,7 +14,7 @@ Dans le contexte de la pandémie du COVID-19 (2020), la France a décidé de met
 
 &nbsp;
 
-In the context of the COVID-19 pandemic (2020), France has decided to set up <b> a general period of confinement </b> and it is in this context that movement of the population has been limited to the bare minimum. Anyone who wants to move outside must now fill out a form.
+In the context of the COVID-19 pandemic (2020), France has ordered <b>a nationwide lockdown</b> and it is in this context that movement of the population has been limited to the bare minimum. Anyone who wants to move outside must now fill out a form.
 
 ## 🎯 Objectif / Objective
 Cette application web <b>GenererDeplacementPDF</b> a pour objectif de faciliter et de simplifier le remplissage des formulaires en générant une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel au format PDF 📄.
@@ -25,7 +25,7 @@ Après avoir rempli et généré l'attestation au format PDF, vous devez <b><u>l
 
 This <b>GenererDeplacementPDF</b> web application aims to facilitate and simplify the filling of forms by generating a derogatory travel certificate or proof of professional travel in PDF format 📄.
 <br>
-After having completed and generated the certificate in PDF format, you must <b> <u> print it in paper format </u> </b> and then present it if needed.
+After having completed and generated the certificate in PDF format, you must <b><u>print it in paper format</u></b> and then present it if needed.
 
 ## 📜 Réglementation / Regulations
 En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
