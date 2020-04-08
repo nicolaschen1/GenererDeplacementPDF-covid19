@@ -9,12 +9,16 @@ GenererDeplacementPDF est une application web qui permet de remplir et générer
 
 GenererDeplacementPDF is a web application which allows you to fill in and generate a derogatory displacement certificate or proof of professional displacement during the confinement period in France in the context of the COVID-19 pandemic (2020).
 
+&nbsp;
+
 ## 🔔 Contexte / Context
 Dans le contexte de la pandémie du COVID-19 (2020), la France a décidé de mettre en place <b>une période de confinement</b> généralisé et c'est dans ce contexte que les déplacements de la population ont été limités au strict minimum. Toute personne 🏃 qui veut se déplacer à l'extérieur doit désormais remplir un formulaire.
 
 &nbsp;
 
 In the context of the COVID-19 pandemic (2020), France has ordered <b>a nationwide lockdown</b> and it is in this context that movement of the population has been limited to the bare minimum. Anyone who wants to move outside must now fill out a form.
+
+&nbsp;
 
 ## 🎯 Objectif / Objective
 Cette application web <b>GenererDeplacementPDF</b> a pour objectif de faciliter et de simplifier le remplissage des formulaires en générant une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel au format PDF 📄.
@@ -26,6 +30,8 @@ Après avoir rempli et généré l'attestation au format PDF, vous devez <b><u>l
 This <b>GenererDeplacementPDF</b> web application aims to facilitate and simplify the filling of forms by generating a derogatory travel certificate or proof of professional travel in PDF format 📄.
 <br>
 After having completed and generated the certificate in PDF format, you must <b><u>print it in paper format</u></b> and then present it if needed.
+
+&nbsp;
 
 ## 📜 Réglementation / Regulations
 En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
@@ -50,6 +56,8 @@ In application of the state of health emergency, travel is prohibited except in 
 - <b> Judicial or administrative summons. </b> </li>
 - <b> Participation in missions of general interest </b> at the request of the administrative authority. </li>
 </ul>
+
+&nbsp;
 
 ## 🔒 Confidentiality
 Aucune donnée n'est collectée durant la génération de l'attestation, c'est-à-dire qu'aucune donnée n'est envoyée sur un serveur, toutes les données utilisées pour générer l'attestation restent sur votre ordinateur.
