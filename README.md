@@ -42,15 +42,14 @@ En application de l’état d’urgence sanitaire, les déplacements sont interd
 &nbsp;
 
 In application of the state of health emergency, travel is prohibited except in the following cases and only on condition that they are provided with a certificate for:
-                <ul class = "list-group">
-                    <li class = "list-group-item"> <b> Travel between home and the place of exercise of the professional activity </b>, when they are essential for the exercise of activities which cannot be organized in the form of telework or business trips which cannot be postponed. </li>
-                    <li class = "list-group-item"> <b> Travel to purchase supplies necessary for the professional activity and purchases of basic necessities </b>, including acquisitions free of charge (distribution of foodstuffs …) and travel related to the receipt of social benefits and the withdrawal of cash, in establishments whose activities remain authorized. </li>
-                    <li class = "list-group-item"> <b> Consultations and care </b> which cannot be provided remotely and which cannot be deferred; care of patients with long-term conditions. </li>
-                    <li class = "list-group-item"> <b> Travel for compelling family reasons </b>, for assistance to vulnerable persons or childcare. </li>
-                    <li class = "list-group-item"> <b> Brief trips, within the limit of one hour daily and within a maximum radius of one kilometer around the home </b>, linked either to physical activity individuals, to the exclusion of all collective sporting activities and all proximity to other people, either for walks with the only people in the same home, or for the needs of pets. </li>
-                    <li class = "list-group-item"> <b> Judicial or administrative summons. </b> </li>
-                    <li class = "list-group-item"> <b> Participation in missions of general interest </b> at the request of the administrative authority. </li>
-                </ul>
+- <b> Travel between home and the place of exercise of the professional activity </b>, when they are essential for the exercise of activities which cannot be organized in the form of telework or business trips which cannot be postponed. </li>
+- <b> Travel to purchase supplies necessary for the professional activity and purchases of basic necessities </b>, including acquisitions free of charge (distribution of foodstuffs …) and travel related to the receipt of social benefits and the withdrawal of cash, in establishments whose activities remain authorized. </li>
+- <b> Consultations and care </b> which cannot be provided remotely and which cannot be deferred; care of patients with long-term conditions. </li>
+- <b> Travel for compelling family reasons </b>, for assistance to vulnerable persons or childcare. </li>
+- <b> Brief trips, within the limit of one hour daily and within a maximum radius of one kilometer around the home </b>, linked either to physical activity individuals, to the exclusion of all collective sporting activities and all proximity to other people, either for walks with the only people in the same home, or for the needs of pets. </li>
+- <b> Judicial or administrative summons. </b> </li>
+- <b> Participation in missions of general interest </b> at the request of the administrative authority. </li>
+</ul>
 
 ## 🔒 Confidentiality
 Aucune donnée n'est collectée durant la génération de l'attestation, c'est-à-dire qu'aucune donnée n'est envoyée sur un serveur, toutes les données utilisées pour générer l'attestation restent sur votre ordinateur.
