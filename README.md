@@ -1,6 +1,6 @@
 # GenererDeplacementPDF-covid19
 
-Présentation en français et anglais / Presentation in French and English
+Présentation en Français et Anglais / Presentation in French and English
 
 ## ℹ️ A propos / About
 GenererDeplacementPDF est une application web qui permet de remplir et générer une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel durant la période de confinement en France dans le contexte de la pandémie du COVID-19 (2020).
