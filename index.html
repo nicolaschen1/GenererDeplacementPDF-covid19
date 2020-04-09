@@ -1,0 +1,487 @@
+<!-- Auteur : Nicolas Chen -->
+<!-- Version : 1.0.0 -->
+<!-- Date : 05/04/2020 -->
+<!-- But : Cette application web GenererDeplacementPDF permet de remplir et générer une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel durant la période de confinement en France dans le contexte de la pandémie du COVID-19 (2020). -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="shortcut icon" href="images/icon1.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <title>GenererDeplacementPDF</title>
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<!-- <body onselectstart="return false" oncontextmenu="return false" ondragstart="return false" onMouseOver="window.status=''; return true;"> -->
+<body>
+  <div class="global">
+    <div id="left">
+      <a href="https://www.who.int/fr" target="_blank"><img src="images/oms.jpg" width="100%" height="100%" alt="Alstom" title="ALSTOM"></a>
+    </div>
+
+    <div id="right">
+      <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank"><img src="images/info_medical.jpg" width="100%" height="100%" alt="Informations" title="Informations"></a>
+    </div>
+
+    <h1>GenererDeplacementPDF</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p><img src="images/icon1.png" width="80px" height="80px" alt="GenererDeplacementPDF" title="Remplissez le formulaire"></p>
+    <h2>Générer votre formulaire pour vous déplacer</h2>
+    <br>
+
+    <div id="center">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-attestation-tab" data-toggle="pill" href="#pills-attestation" role="tab" aria-controls="pills-attestation" aria-selected="true">Attestation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-justificatif-tab" data-toggle="pill" href="#pills-justificatif" role="tab" aria-controls="pills-justificatif" aria-selected="false">Justificatif</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+
+      <div class="tab-pane fade show active" id="pills-attestation" role="tabpanel" aria-labelledby="pills-attestation-tab">
+
+          <form id="form-attestation">
+              <h4 align="center"><font color="blue">Générateur d'attestation de déplacement dérogatoire</font></h4>
+
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#informationModal">
+                      Informations à lire
+                  </button>
+              <br>
+              <h4>Remplissez votre attestation numérique :</h4>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="">Prénom et nom</span>
+                      </div>
+                      <input class="form-control" id="field-firstname" type="text" placeholder="Prénom *" required="required" data-validation-required-message="Veuillez entrer votre prénom.">
+
+                      <input class="form-control" id="field-name" type="text" placeholder="Nom *" required="required" data-validation-required-message="Veuillez entrer votre nom.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-birthday">Date de naissance</span>
+                      </div>
+                      <input class="form-control" id="field-birthday" type="text" placeholder="jj/mm/aaaa *" required="required" data-validation-required-message="Veuillez entrer votre date de naissance.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-birthplace">Lieu de naissance</span>
+                      </div>
+                      <input class="form-control" id="field-birthplace" type="text" placeholder="Lieu de naissance *" required="required" data-validation-required-message="Veuillez entrer votre lieu de naissance.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-address">Adresse de résidence</span>
+                      </div>
+                      <input class="form-control" id="field-address" type="text" placeholder="Adresse de résidence *" required="required" data-validation-required-message="Veuillez entrer votre adresse de résidence.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-city">Ville de résidence</span>
+                      </div>
+                      <input class="form-control" id="field-city" type="text" placeholder="Ville de résidence *" required="required" data-validation-required-message="Veuillez entrer votre ville de résidence.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-zipcode">Code Postal</span>
+                      </div>
+                      <input class="form-control" id="field-zipcode" type="text" placeholder="Code Postal *" required="required" data-validation-required-message="Veuillez entrer votre code postal.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Motif de sortie</label>
+                    </div>
+                    <select class="custom-select" id="selectID">
+                      <option selected>Choisir le motif</option>
+                      <option value="travail">Professionnel</option>
+                      <option value="courses">Achats de premières nécessités</option>
+                      <option value="sante">Santé</option>
+                      <option value="famille">Famille</option>
+                      <option value="sport">Sport individuel</option>
+                      <option value="convocation">Convocation judiciaire ou administrative</option>
+                      <option value="mission">Mission d'intérêt général</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                      <span class="input-group-text" id="field-done-at">Fait à</span>
+                      </div>
+                      <input class="form-control" id="field-done-at" type="text" placeholder="Ville *" required="required" data-validation-required-message="Veuillez entrer votre ville.">
+                  </div>
+                  <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-group">
+                    <label><font color="blue"><b>Signature</b></font></label>
+                    <small id="help-signature" class="form-text text-muted"><font color="green">Dessinez votre signature dans l'espace ci-dessous.</font></small>
+                    <canvas id="field-signature" width=360 height=240 aria-describedby="help-signature"></canvas>
+                    <button id="reset-signature" type="button" class="btn btn-secondary float-right">Effacer la signature</button>
+                    <br><br>
+                </div>
+
+                <br>
+                <button type="submit" class="btn btn-success">Générer mon attestation</button>
+
+                <button type="reset" class="btn btn-danger" onclick="localStorage.clear();  signaturePad.clear();">
+                  Effacer mon profil
+                </button>
+
+          </form>
+
+      </div>
+
+
+      <div class="tab-pane fade show" id="pills-justificatif" role="tabpanel" aria-labelledby="pills-justificatif-tab">
+
+        <form id="form-justificatif">
+            <h4 align="center"><font color="green">Générateur de justificatif de déplacement professionnel</font></h4>
+
+                <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#informationProModal">
+                    Informations à lire
+                </button>
+            <br>
+            <h4>Remplissez votre justificatif numérique :</h4>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-nameCompany">Nom de l'employeur</span>
+                    </div>
+                    <input class="form-control" id="field-nameCompany" type="text" placeholder="Nom de l'employeur *" required="required" data-validation-required-message="Veuillez entrer le nom de l'employeur.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-firstnameCompany">Prénom de l'employeur</span>
+                    </div>
+                    <input class="form-control" id="field-firstnameCompany" type="text" placeholder="Nom de l'employeur *" required="required" data-validation-required-message="Veuillez entrer le prénom de l'employeur.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-funtions">Fonctions</span>
+                    </div>
+                    <input class="form-control" id="field-functions" type="text" placeholder="Fonctions *" required="required" data-validation-required-message="Veuillez entrer les fonctions.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Prénom et nom</span>
+                    </div>
+                    <input class="form-control" id="field-firstname" type="text" placeholder="Prénom *" required="required" data-validation-required-message="Veuillez entrer votre prénom.">
+
+                    <input class="form-control" id="field-name" type="text" placeholder="Nom *" required="required" data-validation-required-message="Veuillez entrer votre nom.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-birthday">Date de naissance</span>
+                    </div>
+                    <input class="form-control" id="field-birthday" type="text" placeholder="jj/mm/aaaa *" required="required" data-validation-required-message="Veuillez entrer votre date de naissance.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-birthplace">Lieu de naissance</span>
+                    </div>
+                    <input class="form-control" id="field-birthplace" type="text" placeholder="Lieu de naissance *" required="required" data-validation-required-message="Veuillez entrer votre lieu de naissance.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-address">Adresse du domicile</span>
+                    </div>
+                    <input class="form-control" id="field-address" type="text" placeholder="Adresse de domicile *" required="required" data-validation-required-message="Veuillez entrer votre adresse de domicile.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-city">Ville de résidence</span>
+                    </div>
+                    <input class="form-control" id="field-city" type="text" placeholder="Ville de résidence *" required="required" data-validation-required-message="Veuillez entrer votre ville de résidence.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-zipcode">Code Postal</span>
+                    </div>
+                    <input class="form-control" id="field-zipcode" type="text" placeholder="Code Postal *" required="required" data-validation-required-message="Veuillez entrer votre code postal.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-job">Nature du métier</span>
+                    </div>
+                    <input class="form-control" id="field-job" type="text" placeholder="Nature du métier *" required="required" data-validation-required-message="Veuillez entrer votre métier.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-workplace">Lieu de travail</span>
+                    </div>
+                    <input class="form-control" id="field-workplace" type="text" placeholder="Lieu de travail *" required="required" data-validation-required-message="Veuillez entrer votre lieu de travail.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-transport">Moyen de déplacement</span>
+                    </div>
+                    <input class="form-control" id="field-transport" type="text" placeholder="Moyen de déplacement *" required="required" data-validation-required-message="Veuillez entrer votre transport.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-validityTime">Durée de validité</span>
+                    </div>
+                    <input class="form-control" id="field-validityTime" type="text" placeholder="Durée de validité *" required="required" data-validation-required-message="Veuillez entrer la durée de validité.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="field-done-at">Fait à</span>
+                    </div>
+                    <input class="form-control" id="field-done-at" type="text" placeholder="Ville *" required="required" data-validation-required-message="Veuillez entrer votre ville.">
+                </div>
+                <p class="help-block text-danger"></p>
+              </div>
+
+              <br>
+              <button type="submit" class="btn btn-success">Générer mon justificatif</button>
+
+              <button type="reset" class="btn btn-danger" onclick="localStorage.clear();" id="deleteJustification">
+                Effacer mon profil
+            </button>
+
+        </form>
+
+    </div>
+
+
+    </div>
+    <!-- fin du tab content -->
+
+    <footer class="footer text-center">
+        <small>
+            <a href="https://mapthenews.maps.arcgis.com/apps/opsdashboard/index.html#/5e09dff7cb434fb194e22261689e2887" style="color:#FFA233" target="_blank" title="Suivre l'évolution de l'épidémie du COVID-19 en France">Carte France</a>
+             *
+            <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" style="color:#FFA233" target="_blank" title="Suivre l'évolution de l'épidémie du COVID-19 dans le monde">Carte Monde</a>
+            *
+            <a href="http://10.23.253.105/pages/alstom_links/index.php" style="color:#FFA233" target="_blank" title="Tous les liens essentiels ALSTOM">ALSTOM LINKS</a>
+
+        </small>
+        <br><br>
+        <small style="color:blue">
+            Copyright &copy; 2020 Nicolas Chen
+            <br>All rights reserved
+            <br><a href="mailto:nicolas.chen3@gmail.com" title="Me contacter">Me contacter</a>
+        </small>
+    </footer>
+
+  </div>
+  <!-- fin de global -->
+
+  <!-- Large modal -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="informationModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="informationModalLongTitle">ℹ️ Application web : GenererDeplacementPDF</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h3>🔔 Contexte</h3>
+            <p>
+            Dans le contexte de la pandémie du COVID-19 (2020), la France a décidé d'instaurer <b>une période de confinement</b> généralisé et c'est dans ce contexte que les déplacements de la population ‍ont été limités au strict minimum. Toute personne 🏃 qui veut se déplacer à l'extérieur doit désormais remplir un formulaire.
+            </p>
+
+            <br>
+            <h3>🎯 Objectif</h3>
+            <p>
+            Cette application web <b>GenererDeplacementPDF</b> a pour objectif de faciliter et de simplifier le remplissage des formulaires en générant une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel au format PDF 📄.
+            <br>
+            Après avoir rempli et généré l'attestation au format PDF, vous devez <b><u>l'imprimer sous format papier</u></b> puis le présenter aux forces de l'ordre.
+            </p>
+
+        <br>
+        <h3>📜 Réglementation</h3>
+            <p>
+            En application de l’état d’urgence sanitaire, les déplacements sont interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour :
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle</b>, lorsqu’ils sont indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail ou déplacements professionnels ne pouvant être différés.</li>
+                    <li class="list-group-item"><b>Déplacements pour effectuer des achats de fournitures nécessaires à l’activité professionnelle et des achats de première nécessité</b>, y compris les acquisitions à titre gratuit (distribution de denrées alimentaires…) et les déplacements liés à la perception de prestations sociales et au retrait d’espèces, dans des établissements dont les activités demeurent autorisées.</li>
+                    <li class="list-group-item"><b>Consultations et soins</b> ne pouvant être assurés à distance et ne pouvant être différés  ; soin des patients atteints d'une affection de longue durée.</li>
+                    <li class="list-group-item"><b>Déplacements pour motif familial impérieux</b>, pour l’assistance aux personnes vulnérables ou la garde d’enfants.</li>
+                    <li class="list-group-item"><b>Déplacements brefs, dans la limite d'une heure quotidienne et dans un rayon maximal d'un kilomètre autour du domicile</b>, liés soit à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective et de toute proximité avec d'autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.</li>
+                    <li class="list-group-item"><b>Convocation judiciaire ou administrative.</b></li>
+                    <li class="list-group-item"><b>Participation à des missions d’intérêt général</b> sur demande de l’autorité administrative.</li>
+                </ul>
+            </p>
+
+        <br>
+        <h3>🔒 Confidentialité</h3>
+            <p>
+            Aucune donnée n'est collectée durant la génération de l'attestation, c'est-à-dire qu'aucune donnée n'est envoyée sur un serveur, toutes les données utilisées pour générer l'attestation restent sur votre ordinateur.
+            </p>
+
+        <br>
+            <p>
+            Bon courage pendant le confinement ! 🏠 👍 🙂
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">J'ai compris !</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="informationProModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="informationProLongTitle">ℹ️ Application web : GenererDeplacementPDF</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h3>🔔 Contexte</h3>
+            <p>
+            Dans le contexte de la pandémie du COVID-19 (2020), la France a décidé d'instaurer <b>une période de confinement</b> généralisé et c'est dans ce contexte que les déplacements de la population ‍ont été limités au strict minimum. Toute personne 🏃 qui veut se déplacer à l'extérieur doit désormais remplir un formulaire.
+            </p>
+
+            <br>
+            <h3>🎯 Objectif</h3>
+            <p>
+            Cette application web <b>GenererDeplacementPDF</b> a pour objectif de faciliter et de simplifier le remplissage des formulaires en générant une attestation de déplacement dérogatoire ou un justificatif de déplacement professionnel au format PDF 📄.
+            <br>
+            Après avoir rempli et généré le justificatif au format PDF, vous devez <b><u>l'imprimer sous format papier</u></b> puis le présenter aux forces de l'ordre.
+            </p>
+
+            <br>
+            <h3>📜 Réglementation</h3>
+            <p>
+              La réglementation dans le cadre de la lutte contre la propagation du virus Covid-19 limite vos déplacements professionnels, sauf exception. Si vous n'êtes pas en télétravail, l'exception s'applique aux trajets entre votre domicile et votre lieu de travail.
+              <br>
+              Vous devez remplir ce formulaire et l'avoir avec vous pour tous vos déplacements.
+              <br>
+              Le formulaire doit être signé par votre employeur avec le cachet de l'entreprise.
+              Ce formulaire est valable pendant toute la durée des mesures de confinement et n’a donc pas à être renouvelé tous les jours.
+            </p>
+
+            <br>
+            <h3>🔒 Confidentialité</h3>
+            <p>
+            Aucune donnée n'est collectée durant la génération du justificatif, c'est-à-dire qu'aucune donnée n'est envoyée sur un serveur, toutes les données utilisées pour générer l'attestation restent sur votre ordinateur.
+            </p>
+
+            <br>
+            <p>
+            Bon courage pendant le confinement ! 🏠 👍 🙂
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">J'ai compris !</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.4.1/dist/pdf-lib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+
+    <script src="attestationDeplacement.js"></script>
+    <script src="justificatifPro.js"></script>
+    <script src="attestation.js"></script>
+    <script src="justificatif.js"></script>
+</body>
+</html>
