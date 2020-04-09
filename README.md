@@ -1,4 +1,4 @@
-# GenererDeplacementPDF-covid19 ![image1](https://github.com/nicolaschen1/GenererDeplacementPDF-covid19/blob/master/images/icon1.png)   
+# GenererDeplacementPDF-covid19 <img src="https://github.com/nicolaschen1/GenererDeplacementPDF-covid19/blob/master/images/icon1.png" width="40">
 
 Présentation en Français et Anglais / Presentation in French and English
 
