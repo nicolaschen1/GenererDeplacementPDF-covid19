@@ -9,7 +9,9 @@ GenererDeplacementPDF est une application web qui permet de remplir et générer
 
 GenererDeplacementPDF is a web application which allows you to fill in and generate a derogatory displacement certificate or proof of professional displacement during the confinement period in France in the context of the COVID-19 pandemic (2020).
 <p align="center">
+  <a href="https://nicolaschen.pagesperso-orange.fr/GenererDeplacementPDF" target="_blank" title="Remplissez le formulaire">
   <img src="https://github.com/nicolaschen1/GenererDeplacementPDF-covid19/blob/master/images/frontend.PNG" text-align="center">
+  </a>
 </p>
 
 &nbsp;
